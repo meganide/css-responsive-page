@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Adopt a cat!</title>
-        <link rel="stylesheet" href="css/font-awesome/css/all.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adopt a cat!</title>
+    <link rel="stylesheet" href="css/font-awesome/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="hamburger">
+        <input type="checkbox" />
         <i class="fas fa-bars"></i>
-    </body>
+        <ul class="menu">
+          <li>How it works</li>
+          <li>About us</li>
+          <li>Contact</li>
+          <li>Blog</li>
+        </ul>
+      </aside>
+      <nav class="nav">
+        <a href="/">How it works</a>
+        <a href="/">About us</a>
+        <a href="/">Contact</a>
+        <a href="/">Blog</a>
+      </nav>
+      <main class="main">
+        <section class="main__content">
+          <h1 class="main__title">Change a cat's life today!</h1>
+          <p class="main__paragraph">
+            Adopt a cat from our cat shelter today. We have a variety of
+            different cats to choose from.
+          </p>
+          <button class="button">Find out how</button>
+        </section>
+      </main>
+      <picture class="picture">
+        <source
+          media="(min-width: 1024px)"
+          srcset="/images/undraw_pet_adoption_desktop.png"
+        />
+        <img
+          src="images/undraw_pet_adoption_mobile.png"
+          alt="cat"
+          class="main__img"
+        />
+      </picture>
+    </div>
+  </body>
 </html>

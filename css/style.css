@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #F8F8F8;
+  --links: #0C1B33;
+  --buttons: #536DFE;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-primary);
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+
+button {
+  font-family: 'Lato', sans-serif;
+
+}
+
+
+
+/* ----------------HAMBURGER MENU START----------------- */
+
+.hamburger {
+  position: relative;
+}
+
+.fas.fa-bars {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 1.3rem;
+}
+
+.menu {
+  width: 10rem;
+  height: 20rem;
+  background: #dcdcdc;
+  margin-top: -30px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  display: none;
+  padding-top: 5rem;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  top: 2rem;
+  right: 2rem;
+}
+
+input:checked~.menu {
+  display: flex;
+}
+
+/* ----------------HAMBURGER MENU END----------------- */
+
+/* -----------------GRID START-------------------- */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "hamburger"
+    "main"
+  ;
+}
+
+.nav {
+  display: none;
+}
+
+.hamburger {
+  grid-area: hamburger;
+  justify-self: flex-end;
+  min-height: 4.6875rem;
+}
+
+.main {
+  grid-area: main;
+  margin: 0 2.5rem;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__img {
+  width: 100%;
+}
+
+.main__paragraph {
+  max-width: 350px;
+}
+
+.button {
+  background-color: var(--buttons);
+  border: none;
+  color: white;
+  padding: .9375rem;
+  border-radius: 10px;
+  display: flex;
+  margin: 3rem auto;
+}
+
+
+
+/* -----------------GRID END-------------------- */
+
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "nav nav nav  "
+    "main picture picture"
+    ;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* place-items: center; */
+    /* row-gap: 50px; */
+  }
+
+  .nav {
+    padding-top: 1.25rem;
+  }
+
+  .nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--links);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    justify-content: center;
+  }
+
+  .main {
+    /* max-width: 20rem; */
+    align-self: center;
+  }
+
+  .main__paragraph {
+    font-size: 1.3rem;
+  }
+
+
+  .picture {
+    grid-area: picture;
+    width: 85%;
+    margin-top: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 920px) {
+  .main__content {
+    margin-top: 5rem;
+  }
+}
